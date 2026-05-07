@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "game": "Soulvegr RPG",
+    "lastUpdated": "2026-05-07",
+    "description": "Master data file for all Soulvegr game content"
+  },
+
+  "core": {
+    "attributes": [
+      {
+        "key": "authority",
+        "label": "Authority",
+        "abbr": "AUT",
+        "description": "Leadership, charisma, and command presence"
+      },
+      {
+        "key": "force",
+        "label": "Force",
+        "abbr": "FRC",
+        "description": "Physical power, martial prowess, and combat ability"
+      },
+      {
+        "key": "vitality",
+        "label": "Vitality",
+        "abbr": "VIT",
+        "description": "Health, endurance, and physical resilience"
+      },
+      {
+        "key": "mind",
+        "label": "Mind",
+        "abbr": "MND",
+        "description": "Intelligence, reasoning, and knowledge"
+      },
+      {
+        "key": "substance",
+        "label": "Substance",
+        "abbr": "SUB",
+        "description": "Dexterity, precision, and material control"
+      },
+      {
+        "key": "spirit",
+        "label": "Spirit",
+        "abbr": "SPI",
+        "description": "Willpower, soul essence, and cosmic awareness"
+      }
+    ],
+
+    "pillars": [
+      {
+        "name": "Vessel",
+        "description": "The body that houses the soul",
+        "associatedAttributes": ["force", "vitality"]
+      },
+      {
+        "name": "Soul",
+        "description": "The cosmic essence within",
+        "associatedAttributes": ["spirit", "mind"]
+      },
+      {
+        "name": "Essence",
+        "description": "The mind and identity",
+        "associatedAttributes": ["mind", "authority"]
+      }
+    ]
+  },
+
+  "epochs": [
+    {
+      "key": "initiate",
+      "name": "Initiate",
+      "levels": [1, 10],
+      "description": "Mortal heroes just beginning their journey",
+      "hp_formula": "10 + VIT_mod + FRC_mod",
+      "ep_formula": "10 + MND_mod + SPI_mod"
+    },
+    {
+      "key": "advanced",
+      "name": "Advanced",
+      "levels": [11, 20],
+      "description": "Living legends of power",
+      "hp_formula": "10 + VIT_mod + FRC_mod + 2",
+      "ep_formula": "10 + MND_mod + SPI_mod + 2"
+    },
+    {
+      "key": "ascended",
+      "name": "Ascended",
+      "levels": [21, 30],
+      "description": "Demigods approaching godhood",
+      "hp_formula": "10 + VIT_mod + FRC_mod + 4",
+      "ep_formula": "10 + MND_mod + SPI_mod + 4"
+    }
+  ],
+
+  "skills": [
+    {
+      "key": "athletics",
+      "name": "Athletics",
+      "attribute": "force",
+      "description": "Running, jumping, swimming, climbing"
+    },
+    {
+      "key": "acrobatics",
+      "name": "Acrobatics",
+      "attribute": "force",
+      "description": "Balance, flexibility, tumbling"
+    },
+    {
+      "key": "close_combat",
+      "name": "Close Combat",
+      "attribute": "force",
+      "description": "Melee weapon proficiency"
+    },
+    {
+      "key": "ranged_combat",
+      "name": "Ranged Combat",
+      "attribute": "force",
+      "description": "Ranged weapon proficiency"
+    },
+    {
+      "key": "fortitude",
+      "name": "Fortitude",
+      "attribute": "vitality",
+      "description": "Resistance to poison, disease, exhaustion"
+    },
+    {
+      "key": "survival",
+      "name": "Survival",
+      "attribute": "vitality",
+      "description": "Tracking, foraging, wilderness navigation"
+    },
+    {
+      "key": "might",
+      "name": "Might",
+      "attribute": "vitality",
+      "description": "Carrying, breaking, wrestling"
+    },
+    {
+      "key": "stealth",
+      "name": "Stealth",
+      "attribute": "substance",
+      "description": "Hiding, moving silently"
+    },
+    {
+      "key": "sleight_of_hand",
+      "name": "Sleight of Hand",
+      "attribute": "substance",
+      "description": "Lockpicking, pickpocketing, manipulation"
+    },
+    {
+      "key": "piloting",
+      "name": "Piloting",
+      "attribute": "substance",
+      "description": "Vehicles, spacecraft, frames"
+    },
+    {
+      "key": "mechanics",
+      "name": "Mechanics",
+      "attribute": "substance",
+      "description": "Repair, maintenance, engineering"
+    },
+    {
+      "key": "technology",
+      "name": "Technology",
+      "attribute": "mind",
+      "description": "Hacking, programming, AI interaction"
+    },
+    {
+      "key": "medicine",
+      "name": "Medicine",
+      "attribute": "mind",
+      "description": "Healing, surgery, diagnosis"
+    },
+    {
+      "key": "investigation",
+      "name": "Investigation",
+      "attribute": "mind",
+      "description": "Analysis, puzzle solving, research"
+    },
+    {
+      "key": "know_galaxy",
+      "name": "Knowledge (Galaxy)",
+      "attribute": "mind",
+      "description": "History, cultures, geography"
+    },
+    {
+      "key": "know_void",
+      "name": "Knowledge (Void)",
+      "attribute": "mind",
+      "description": "Cosmic lore, Realms, divine entities"
+    },
+    {
+      "key": "perception",
+      "name": "Perception",
+      "attribute": "spirit",
+      "description": "Noticing details, seeing threats"
+    },
+    {
+      "key": "insight",
+      "name": "Insight",
+      "attribute": "spirit",
+      "description": "Reading emotions, detecting lies"
+    },
+    {
+      "key": "willpower",
+      "name": "Willpower",
+      "attribute": "spirit",
+      "description": "Resisting mental effects, maintaining focus"
+    },
+    {
+      "key": "channeling",
+      "name": "Channeling",
+      "attribute": "spirit",
+      "description": "Using powers and manifesting abilities"
+    },
+    {
+      "key": "persuasion",
+      "name": "Persuasion",
+      "attribute": "authority",
+      "description": "Influence through reasoning"
+    },
+    {
+      "key": "intimidation",
+      "name": "Intimidation",
+      "attribute": "authority",
+      "description": "Influence through threat"
+    },
+    {
+      "key": "leadership",
+      "name": "Leadership",
+      "attribute": "authority",
+      "description": "Inspiring allies, command"
+    },
+    {
+      "key": "deception",
+      "name": "Deception",
+      "attribute": "authority",
+      "description": "Lying, disguise, misdirection"
+    }
+  ],
+
+  "races": [
+    {
+      "name": "Human",
+      "description": "Adaptable and ambitious",
+      "is_playable": true,
+      "bp_cost": 0,
+      "base_speed": 30,
+      "attribute_bonuses": {},
+      "traits": [
+        {
+          "name": "Adaptability",
+          "description": "Gain +2 to any skill of your choice"
+        }
+      ]
+    }
+  ],
+
+  "talents": [
+    {
+      "name": "Iron Will",
+      "description": "Gain advantage on Willpower checks vs mind control and mental domination effects",
+      "bp_cost": 30,
+      "epochs": ["Initiate", "Advanced", "Ascended"],
+      "effects": {
+        "willpower_advantage": true
+      }
+    }
+  ],
+
+  "perks": [
+    {
+      "name": "Ally Network",
+      "description": "You have trusted contacts in 3 major star systems",
+      "bp_cost": 10,
+      "effects": {
+        "contacts": 3
+      }
+    }
+  ],
+
+  "hindrances": [
+    {
+      "name": "Wanted",
+      "description": "Bounty hunters periodically pursue you",
+      "bp_cost": -10,
+      "effects": {
+        "wanted": true
+      }
+    }
+  ],
+
+  "powers": [
+    {
+      "name": "Kinetic Blast",
+      "origin": "Martial",
+      "tier": 1,
+      "type": "Active",
+      "description": "Hurl a wave of kinetic force at a target",
+      "ep_cost": 2,
+      "purchase_cost": 20,
+      "range": "30 ft",
+      "damage": "2d6",
+      "requirements": "Force 10+"
+    }
+  ],
+
+  "channeling_origins": [
+    {
+      "name": "Martial",
+      "realm": "Physical",
+      "description": "Powers derived from pure martial mastery",
+      "powers_available": 15,
+      "max_per_character": 3
+    }
+  ],
+
+  "conditions": [
+    "Blinded",
+    "Deafened",
+    "Frightened",
+    "Grappled",
+    "Incapacitated",
+    "Invisible",
+    "Paralyzed",
+    "Petrified",
+    "Poisoned",
+    "Prone",
+    "Restrained",
+    "Stunned",
+    "Unconscious",
+    "Exhausted",
+    "Bleeding"
+  ],
+
+  "equipment": {
+    "weapons": [
+      {
+        "name": "Plasma Pistol",
+        "category": "Weapon",
+        "subcategory": "Ranged",
+        "cost": 150,
+        "weight": 2,
+        "damage": "1d8",
+        "range": "30/60 ft",
+        "properties": ["Energy", "Silent"],
+        "notes": "Ignores 1 point of armor"
+      }
+    ],
+    "armor": [
+      {
+        "name": "Exo-Frame Light",
+        "category": "Armor",
+        "cost": 500,
+        "weight": 20,
+        "defense_value": 3,
+        "properties": ["No penalties"],
+        "notes": "Integrated HUD and comms"
+      }
+    ],
+    "gear": [
+      {
+        "name": "Stim Pack",
+        "category": "Consumable",
+        "cost": 25,
+        "weight": 0.5,
+        "description": "Restore 2d6 HP",
+        "properties": ["Single-use", "1 action"]
+      }
+    ]
+  },
+
+  "divine_houses": [
+    {
+      "name": "House of War",
+      "realm": "War",
+      "description": "Servants of conflict and struggle",
+      "ethos": "Through struggle comes growth"
+    }
+  ],
+
+  "advancement": {
+    "breakthrough_points": {
+      "base_pool": 150,
+      "costs": {
+        "attribute_increase": 10,
+        "skill_rank": 2,
+        "talent": 30,
+        "perk": 10,
+        "hindrance_refund": -10,
+        "power": 20
+      }
+    }
+  }
+}
